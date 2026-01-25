@@ -16,17 +16,17 @@ os.makedirs("plots", exist_ok=True)
 plt.figure(figsize=(8, 6))
 sns.scatterplot(
     data=df,
-    x='sepal length',
+    x='sepal width',
     y='petal length',
     hue=target_name,
     style=target_name,
     s=90
 )
 
-plt.title('Iris Species: Sepal Length vs Petal Length')
-plt.xlabel('Sepal Length (cm)')
+plt.title('Iris Species: Sepal Width vs Petal Length')
+plt.xlabel('Sepal Width (cm)')
 plt.ylabel('Petal Length (cm)')
 plt.legend(title='Iris Species')
 plt.grid(True)
-plt.savefig('plots/iris_all_species.png', dpi=150)
+plt.savefig('plots/sepal_width_v_petal_length.png', dpi=150)
 plt.close()

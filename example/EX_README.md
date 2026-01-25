@@ -12,26 +12,41 @@ Iris Classification Dataset
 Predicted Attribute: Class of Iris Plant
  - Setosa, Versicolour, or Virginica
 
-**Features Used:**  
+**Features Considered:**  
 - Sepal Length
 - Petal Length
-- Sepal Width (not used)
-- Petal Width (not used)
+- Sepal Width
+- Petal Width
 
-**[Video Review](https://)**
+**[Video Review](https://youtu.be/dQw4w9WgXcQ)**
+
+## Getting Started
+
+<img src="getting_started/plots/sepal_length_v_petal_length.png" alt="X vs Y – Iris Dataset" width="300">
+<img src="getting_started/plots/sepal_width_v_petal_length.png" alt="X vs Y – Iris Dataset" width="300">
+<img src="getting_started/plots/sepal_width_v_petal_width.png" alt="X vs Y – Iris Dataset" width="300">
+
 
 ## Human Algorithm
 
 ### Pseudo-Code
 ```text
-Write your human decision rules here.
+The clearest difference is iris classification is visible when sepal width is compared to petal width, so the human-algorithm is:
+
+    IF petal_width < 0.6:
+        Predict Setosa
+    ELSE IF petal_width < 1.6:
+        Predict Versicolor
+    ELSE:
+        Predict Virginica
+
 ```
 
-When examining the data and visualizations, we focused on the features ___ and ___ because ___.
+When examining the data and visualizations, we focused on petal width only, because it appears that this measurement has the most distinction between species.
 
-The plots/tables suggested a possible threshold for ___, and we considered values above or below this point to see how they might relate to ___.
+The plots/tables suggested a possible threshold for petal width, and we considered values above or below 0.6 and 1.6 to see how they might relate to species.
 
-From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in our decision rules.
+From the summary tables and visualizations, it appeared that sepal width could influence classification, which led us to using this factor in our decision rules.
 
 ### Confusion Matrix
 
